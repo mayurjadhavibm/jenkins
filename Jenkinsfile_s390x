@@ -29,13 +29,7 @@ axes.values().combinations {
         // First stage is actually checking out the source. Since we're using Multibranch
         // currently, we can use "checkout scm".
         stage("${platform.capitalize()} - JDK ${jdk} - Checkout") {
-          if (env.BRANCH_NAME) {
-            checkout scm
-          } else if (!env.BRANCH_NAME && repo) {
-            git repo
-          } else {
-            error 'buildPlugin must be used as part of a Multibranch Pipeline *or* a `repo` argument must be provided'
-          }
+          checkout scm
         }
 
         def tmpDir = pwd(tmp: true)
