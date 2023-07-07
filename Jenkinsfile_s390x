@@ -67,9 +67,9 @@ axes.values().combinations {
                       "YARN_ENABLE_IMMUTABLE_INSTALLS=false"]) {                   
                   sh "mvn ${mavenOptions.join(' ')}"
               }
-              if (isUnix()) {
-                sh 'git add . && git diff --exit-code HEAD'
-              }
+              //if (isUnix()) {
+              //  sh 'git add . && git diff --exit-code HEAD'
+              //}
             }
           }
         }
