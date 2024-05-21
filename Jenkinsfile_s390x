@@ -25,7 +25,7 @@ axes.values().combinations {
     // see https://github.com/jenkins-infra/documentation/blob/master/ci.adoc#node-labels for information on what node types are available
     def agentContainerLabel = 's390x'
     //retry(conditions: [kubernetesAgent(handleNonKubernetes: true), nonresumable()], count: 2) {
-      node(s390x) {
+      node("s390x") {
         // First stage is actually checking out the source. Since we're using Multibranch
         // currently, we can use "checkout scm".
         stage("${platform.capitalize()} - JDK ${jdk} - Checkout") {
