@@ -14,7 +14,8 @@ properties([
 
 def axes = [
   platforms: ['linux'],
-  jdks: [11, 17, 19],
+  // temp comments all jdk jdks: [11, 17, 19],
+  jdks: [11],
 ]
 
 def builds = [:]
