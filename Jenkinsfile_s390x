@@ -64,7 +64,7 @@ axes.values().combinations {
             realtimeJUnit(healthScaleFactor: 20.0, testResults: '*/target/surefire-reports/*.xml') {
               withEnv([
                       //commented by MJ"JAVA_HOME=${ tool "jdk_${jdk}_latest" }",
-                      JAVA_HOME=/home/test/jdk-11.0.12+7",
+                      "JAVA_HOME=/home/test/jdk-11.0.12+7",
                       "PATH+MAVEN=${ tool "jdk_${jdk}_latest" }/bin:${tool "maven_3_latest"}/bin",
                       "MAVEN_OPTS=-Xms2g -Xmx4g -XX:+PrintCommandLineFlags -Djava.awt.headless=true",
                       "YARN_ENABLE_IMMUTABLE_INSTALLS=false"]) {                   
