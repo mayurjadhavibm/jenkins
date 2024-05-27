@@ -49,6 +49,7 @@ axes.values().combinations {
               "--show-version",
               "--errors", 
               "--no-transfer-progress",
+              "-Dignore.dirt",
               "-Dmaven.repo.local=$m2repo",
               '-Dmaven.test.failure.ignore',
               '-DforkCount=2',
